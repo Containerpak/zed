@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Zed
+Comment=Edit code with a high-performance collaborative editor.
+Exec=zed %F
+Icon=zed
+Terminal=false
+Categories=Development;TextEditor;
