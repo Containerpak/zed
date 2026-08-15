@@ -14,7 +14,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: publish-opera-${{ github.ref }}
+  group: publish-zed-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
       - id: meta
         uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051
         with:
-          images: ghcr.io/containerpak/opera
+          images: ghcr.io/containerpak/zed
           tags: |
             type=raw,value=main
             type=sha,prefix=sha-
@@ -50,6 +50,6 @@ jobs:
           provenance: mode=max
           sbom: true
       - name: Verify package
-        run: docker run --rm ghcr.io/containerpak/opera:main sh -c 'test -x /usr/bin/opera && test -f /usr/share/applications/opera.desktop'
+        run: docker run --rm ghcr.io/containerpak/zed:main sh -c 'test -x /usr/bin/zed && test -f /usr/share/applications/zed.desktop'
       - name: Publish summary
-        run: echo "ghcr.io/containerpak/opera@${{ steps.build.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
+        run: echo "ghcr.io/containerpak/zed@${{ steps.build.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
