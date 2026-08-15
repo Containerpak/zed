@@ -3,7 +3,7 @@ FROM ubuntu:26.04 AS source
 ADD --checksum=sha256:abf751395da92fcac783e1ec59e9812ac4c4ebb33a27f7f51059edde1aee99f9 https://github.com/zed-industries/zed/releases/download/v1.15.0/zed-linux-x86_64.tar.gz /tmp/app.tar.gz
 
 RUN mkdir -p /out && \
-    tar -xzf /tmp/app.tar.gz -C /out
+    tar -xzf /tmp/app.tar.gz --strip-components=1 -C /out
 
 FROM ghcr.io/containerpak/gtk3:main
 
