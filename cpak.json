@@ -4,7 +4,7 @@
   "name": "Zed",
   "description": "Edit code with a high-performance collaborative editor.",
   "version": "1.17.2",
-  "image": "ghcr.io/containerpak/zed@sha256:04bde8079f22c014ebd6780deb924472005fc2b68e51320b5be2f8bd08e14ee8",
+  "image": "ghcr.io/containerpak/zed@sha256:100ff29c8d9266eab2fe656ea7bb979b149f8b232ee58abcfc1d0f4eb60d090c",
   "binaries": [
     "/usr/bin/zed"
   ],
