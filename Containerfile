@@ -1,6 +1,6 @@
 FROM ubuntu:26.04 AS source
 
-ADD --checksum=sha256:60ee2da27b378c5d00cbfc4e9e0c9842e37795803c4565754f41be5423898799 https://github.com/zed-industries/zed/releases/download/v1.18.0/zed-linux-x86_64.tar.gz /tmp/app.tar.gz
+ADD --checksum=sha256:eea62268d8ec5fd3587df06fa76e072c104cca5e0b0b0abecbc28ae5b87c0bad https://github.com/zed-industries/zed/releases/download/v1.18.1/zed-linux-x86_64.tar.gz /tmp/app.tar.gz
 
 RUN mkdir -p /out && \
     tar -xzf /tmp/app.tar.gz --strip-components=1 -C /out
